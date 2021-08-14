@@ -36,26 +36,7 @@ function draw(){
       ghost.x = ghost.x - 3;
     }
     
-    if(keyDown("right_arrow")){
-      ghost.x = ghost.x + 3;
-    }
-    
-    if(keyDown("space")){
-      ghost.velocityY = -10;
-    }
-    
-    ghost.velocityY = ghost.velocityY + 0.8
-    
-    if(tower.y > 400){
-      tower.y = 300
-    }
-    spawnDoors();
-
-    
-    //climbersGroup.collide(ghost);
-    if(climbersGroup.isTouching(ghost)){
-      ghost.velocityY = 0;
-    }
+   //start from keydiown
     if(invisibleBlockGroup.isTouching(ghost) || ghost.y > 600){
       ghost.destroy();
       gameState = "end"
